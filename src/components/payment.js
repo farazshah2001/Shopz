@@ -46,14 +46,14 @@ function Form() {
         if(!error){
             try {
                 const {id} = paymentMethod
-                const response = await axios.post("http://localhost:5000/stripePayment",{
+                const response = await axios.post(`https://shopz-express-rest-api.herokuapp.com/stripePayment`,{
                     amount:itemPrice,
                     id
                 });
                 if (response.data.success){
                     console.log("successful payment");
                     const buyResult =  await axios({
-                        url:"http://localhost:5000/buyOrders/add",
+                        url:`https://shopz-express-rest-api.herokuapp.com/buyOrders/add`,
                         method:"post",
                         data:{
                             item:localStorage.getItem("singleItemId"),

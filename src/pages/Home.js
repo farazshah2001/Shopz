@@ -7,7 +7,6 @@ import Items from '../components/home/items'
 import Navigation from '../components/home/navigation'
 export default function Home() {
     const {loggIn} = useGlobalContext();
-
     useEffect(() => {
         if(localStorage.getItem("loggedUser")){
             loggIn(localStorage.getItem("loggedUser"));

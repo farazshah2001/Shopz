@@ -39,7 +39,7 @@ export default function Sell() {
     const sellItem = async (e) => {
         e.preventDefault();
         const sellResult =  await axios({
-            url:"http://localhost:5000/items/add",
+            url:`https://shopz-express-rest-api.herokuapp.com/items/add`,
             method:"post",
         
             data:{

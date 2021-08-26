@@ -94,7 +94,7 @@ function ReviewForm({itemId}) {
     const addReview = async (e) => {
         e.preventDefault();
         const addReviewResult =  await axios({
-            url:"http://localhost:5000/items/addReview",
+            url:`https://shopz-express-rest-api.herokuapp.com/items/addReview`,
             method:"post",
             data:{
                 id:itemId,
@@ -105,7 +105,7 @@ function ReviewForm({itemId}) {
         });
         console.log(addReviewResult);
         const newItemResult =  await axios({
-            url:`http://localhost:5000/items/${itemId}`,
+            url:`https://shopz-express-rest-api.herokuapp.com/items/${itemId}`,
             method:"get"
         });
         localStorage.setItem("singleItem",JSON.stringify(newItemResult.data));

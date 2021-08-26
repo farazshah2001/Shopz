@@ -52,7 +52,7 @@ export default function Login() {
     }
     const login = async (loginEmail,loginPassword) => {
         const loginResult =  await axios({
-            url:"http://localhost:5000/users/login",
+            url:`https://shopz-express-rest-api.herokuapp.com/users/login`,
             method:"post",
             data:{
                 email:loginEmail,
@@ -70,7 +70,7 @@ export default function Login() {
             loggIn(loginResult.data);
             localStorage.setItem("loggedUser", loginResult.data);
             const userResult =  await axios({
-                url:`http://localhost:5000/users/${loginResult.data}`,
+                url:`https://shopz-express-rest-api.herokuapp.com/users/${loginResult.data}`,
                 method:"get"
             });
             localStorage.setItem("user",JSON.stringify(userResult.data));

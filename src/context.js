@@ -22,14 +22,14 @@ export const AppProvider = ({children}) => {
     } 
     const fetchItems = async () => {
         const itemsResult =  await axios({
-            url:"http://localhost:5000/items",
+            url:`https://shopz-express-rest-api.herokuapp.com/items`,
             method:"get"
         });
         dispatch({ type: 'FETCH_ITEMS', payload: itemsResult.data})
     }
     const fetchCategory = async (category,gender,ageGroup,color) => {
         const itemsResult =  await axios({
-            url:"http://localhost:5000/items",
+            url:`https://shopz-express-rest-api.herokuapp.com/items`,
             method:"get"
         });
         dispatch({ type: 'FETCH_CATEGORY', payload: {data:itemsResult.data,category,gender,ageGroup,color}})
@@ -40,7 +40,7 @@ export const AppProvider = ({children}) => {
         //     method:"get"
         // });
         const userResult =  await axios({
-            url:`http://localhost:5000/users/${localStorage.getItem("loggedUser")}`,
+            url:`${process.env.REACT_APP_BACKEND_SERVER}users/${localStorage.getItem("loggedUser")}`,
             method:"get"
         });
         

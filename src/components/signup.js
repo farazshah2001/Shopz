@@ -54,7 +54,7 @@ export default function Signup() {
             if(signupName != "" && signupEmail != "" && signupPassword != ""){ // a double check
                 console.log("double check completed");
                 const registerResult =  await axios({
-                    url:"http://localhost:5000/users/add",
+                    url:`https://shopz-express-rest-api.herokuapp.com/users/add`,
                     method:"post",
                     data:{
                         name:signupName,

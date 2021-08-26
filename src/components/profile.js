@@ -54,7 +54,7 @@ function Display() {
     const deleteAddress = async (addrId) => {
         console.log("address id : ",addrId);
         const addressRemoveResult =  await axios({
-            url:`http://localhost:5000/users/${user._id}/deleteAddress`,
+            url:`https://shopz-express-rest-api.herokuapp.com/users/${user._id}/deleteAddress`,
             method:"post",
             data:{
                 id:addrId
@@ -62,14 +62,14 @@ function Display() {
         });
         console.log("address deleted from user : ",addressRemoveResult);
         const deleteaddrResult =  await axios({
-            url:"http://localhost:5000/addresses/delete",
+            url:`https://shopz-express-rest-api.herokuapp.com/addresses/delete`,
             method:"post",
             data:{
                 id:addrId
             }
         });
         const userResult =  await axios({
-            url:`http://localhost:5000/users/${user._id}`,
+            url:`https://shopz-express-rest-api.herokuapp.com/users/${user._id}`,
             method:"get"
         });
         localStorage.setItem("user",JSON.stringify(userResult.data));
@@ -161,7 +161,7 @@ function Display() {
             setnewpassError(true);
         }else{
             const changePassResult =  await axios({
-                url:"http://localhost:5000/users/update",
+                url:`https://shopz-express-rest-api.herokuapp.com/users/update`,
                 method:"post",
                 data:{
                     _id:loggedIn,
@@ -170,7 +170,7 @@ function Display() {
             });
             console.log("pass change result",changePassResult);
             const userResult =  await axios({
-                url:`http://localhost:5000/users/${user._id}`,
+                url:`https://shopz-express-rest-api.herokuapp.com/users/${user._id}`,
                 method:"get"
             });
             localStorage.setItem("user",JSON.stringify(userResult.data));
@@ -240,7 +240,7 @@ function Display() {
 
     const addAddr = async () => {
         const addressAddResult =  await axios({
-            url:"http://localhost:5000/addresses/add",
+            url:`https://shopz-express-rest-api.herokuapp.com/addresses/add`,
             method:"post",
             data:{
                 map:"",
@@ -254,7 +254,7 @@ function Display() {
         });
        // console.log("add address result",addressAddResult);
         const addAddressResult =  await axios({
-            url:`http://localhost:5000/users/${loggedIn}/addAddress`,
+            url:`https://shopz-express-rest-api.herokuapp.com/users/${loggedIn}/addAddress`,
             method:"post",
             data:{
                 id:addressAddResult.data
@@ -262,7 +262,7 @@ function Display() {
         });
         console.log("add address result",addAddressResult);
         const userResult =  await axios({
-            url:`http://localhost:5000/users/${user._id}`,
+            url:`https://shopz-express-rest-api.herokuapp.com/users/${user._id}`,
             method:"get"
         });
         localStorage.setItem("user",JSON.stringify(userResult.data));
