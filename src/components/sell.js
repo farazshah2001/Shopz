@@ -56,7 +56,7 @@ export default function Sell() {
                     ageGroup,
                     category
                 },
-                images:[{imageUrl}],
+                images:[imageUrl],
                 reviews:[],
                 seller:loggedIn
             }
