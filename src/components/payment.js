@@ -65,6 +65,7 @@ function Form() {
                             address:paymentAddr
                         }
                     });
+                    
                     console.log(buyResult.data);
                 }
             } catch (error) {

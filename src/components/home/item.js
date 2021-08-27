@@ -5,6 +5,7 @@ export default function Item({item}) {
     const history = useHistory();
     const itemClicked = () => {
         localStorage.setItem("singleItem",JSON.stringify(item));
+        localStorage.setItem("singleItemId",item._id);
         history.push("/singleItem");
     }
 ////// rating logic

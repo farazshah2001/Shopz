@@ -4,8 +4,10 @@ import { Link , useHistory} from 'react-router-dom';
 
 import {useGlobalContext} from '../context'
 export default function SingleItem() {
+    
     const history = useHistory();
     const [singleItem, setsingleItem] = useState(JSON.parse(localStorage.getItem("singleItem")));
+    const [canReview, setcanReview] = useState(false);
     const loggedUser = localStorage.getItem("loggedUser");
     const {reviewDToggle} = useGlobalContext();
     const {reviewDisplay} = useGlobalContext();
@@ -15,7 +17,23 @@ export default function SingleItem() {
     console.log("latest : ",JSON.parse(localStorage.getItem("singleItem")));
     }, [reviewDisplay]);
     
-    
+    const canReviewCheck = async () => {
+        const ordersResult =  await axios({
+            url:`https://shopz-express-rest-api.herokuapp.com/buyOrders`,
+            method:"get"
+        });
+        const orders =  ordersResult.data;
+        orders.map((order)=>{
+            if(order.item && order.buyer && order.item._id == singleItem._id && order.buyer._id == loggedUser){// clean database , secure forms and remove the unneceray code
+                console.log("he ought thsis");
+                setcanReview(true);
+            }
+        });
+        console.log("checking for buying");
+    }
+    useEffect(() => {
+        canReviewCheck();
+    }, [])
     
     return (
         <div className="p-4 m-6  bg-gray-100 lg:grid lg:grid-cols-5">
@@ -68,7 +86,7 @@ export default function SingleItem() {
                     }
                    </div>
                    {reviewDisplay && <ReviewForm itemId={singleItem._id} />}
-                   {!reviewDisplay && loggedUser && <button onClick={()=>{reviewDToggle(true)}} className="w-full h-12 bg-blue-400 hover:bg-blue-500 rounded mt-2">Add review</button>}
+                   {!reviewDisplay && loggedUser && canReview && <button onClick={()=>{reviewDToggle(true)}} className="w-full h-12 bg-blue-400 hover:bg-blue-500 rounded mt-2">Add review</button>}
                 </div>
             </div>
         </div>
