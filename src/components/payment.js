@@ -1,4 +1,4 @@
-import React , {useState} from 'react'
+import React , {useState,useEffect} from 'react'
 import { Link , useHistory } from 'react-router-dom';
 import {Elements,CardElement , useElements , useStripe} from '@stripe/react-stripe-js'
 import {loadStripe} from '@stripe/stripe-js'
@@ -12,8 +12,12 @@ const stripePublicKey = "pk_test_51JMDlmI039zhfrBWIwkUjTm3VmgOEL0gw97PHh8Jt4wo5c
 
 export default function Payment() {
         const stripeTestPromise = loadStripe(stripePublicKey); 
-        
-   
+        const history = useHistory();
+        useEffect(() => {
+            if (!localStorage.getItem("loggedUser")) {
+              history.push("/login");
+            }
+        },[]);
     return (
         <Elements stripe={stripeTestPromise}>
             <Form />

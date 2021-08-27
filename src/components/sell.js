@@ -8,6 +8,7 @@ export default function Sell() {
 
     const {loggedIn} = useGlobalContext();
     const [name, setname] = useState("");
+    const [imageUrl, setimageUrl] = useState("");
     const [price, setprice] = useState("");
     const [category, setcategory] = useState("");
     const [color, setcolor] = useState("");
@@ -17,6 +18,9 @@ export default function Sell() {
 
     const onNameChange = (e) => {
         setname(e.target.value);
+    }
+    const onImageUrlChange = (e) => {
+        setimageUrl(e.target.value);
     }
     const onPriceChange = (e) => {
         setprice(e.target.value);
@@ -52,7 +56,7 @@ export default function Sell() {
                     ageGroup,
                     category
                 },
-                images:['www.image.com'],
+                images:[{imageUrl}],
                 reviews:[],
                 seller:loggedIn
             }
@@ -79,6 +83,7 @@ export default function Sell() {
                 <div className=" grid grid-cols-3">
                     <div className="space-y-10">
                         <p>item  name</p>
+                        <p>Image Url</p>
                         <p>price</p>
                         <p>Category  </p>
                         <p>Color  </p>
@@ -89,6 +94,7 @@ export default function Sell() {
                     <div className="col-span-2 space-y-4">
                         <input type="text" value={name} onChange={onNameChange} className="border-blue-400 w-full"></input>
                         <input type="text" value={price} onChange={onPriceChange} className="border-blue-400 w-full"></input>
+                        <input type="text" value={imageUrl} onChange={onImageUrlChange} className="border-blue-400 w-full"></input>
                         <select name="category" value={category} onChange={onCategorySelect} className="w-full   w-36 h-12 bg-white border-2  border-blue-400"  >
                                 <option value="" selected disabled hidden>Choose here</option>
                                 <option value="sport" className=" bg-black text-white text-2xl">Sport</option>

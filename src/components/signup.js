@@ -86,7 +86,7 @@ export default function Signup() {
     }
     const onLoginFailure = (res) => {
         console.log(res);
-        console.log("login failed");
+        console.log("signup failed");
     }
     
     const onFacebookCallback = async (res) => {
