@@ -17,9 +17,9 @@ export default function Home() {
         <>
          <Navigation page="home" />
          <Categories />
-         <div className="lg:grid lg:grid-cols-10 mt-4">
-            <div className="lg:col-span-2"><Filter /> </div>
-            <div className="lg:col-span-8"><Items /></div>
+         <div className="lg:grid lg:grid-cols-12 mt-4">
+            <div className="lg:col-span-3 "><Filter /> </div>
+            <div className="lg:col-span-9 "><Items /></div>
          </div>
          
            

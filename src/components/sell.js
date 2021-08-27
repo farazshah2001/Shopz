@@ -43,7 +43,8 @@ export default function Sell() {
     const sellItem = async (e) => {
         e.preventDefault();
         const sellResult =  await axios({
-            url:`https://shopz-express-rest-api.herokuapp.com/items/add`,
+            // url:`https://shopz-express-rest-api.herokuapp.com/items/add`,
+            url:`http://localhost:5000/items/add`,
             method:"post",
         
             data:{
@@ -63,6 +64,7 @@ export default function Sell() {
     }); 
     if(sellResult.data == "Item added !"){
         setname("");
+        setimageUrl("");
         setprice("");
         setcategory("");
         setcolor("");
@@ -93,8 +95,8 @@ export default function Sell() {
                     </div>
                     <div className="col-span-2 space-y-4">
                         <input type="text" value={name} onChange={onNameChange} className="border-blue-400 w-full"></input>
-                        <input type="text" value={price} onChange={onPriceChange} className="border-blue-400 w-full"></input>
                         <input type="text" value={imageUrl} onChange={onImageUrlChange} className="border-blue-400 w-full"></input>
+                        <input type="text" value={price} onChange={onPriceChange} className="border-blue-400 w-full"></input>
                         <select name="category" value={category} onChange={onCategorySelect} className="w-full   w-36 h-12 bg-white border-2  border-blue-400"  >
                                 <option value="" selected disabled hidden>Choose here</option>
                                 <option value="sport" className=" bg-black text-white text-2xl">Sport</option>
