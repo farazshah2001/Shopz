@@ -60,6 +60,8 @@ export default function Filter() {
                                 <option value="cloths" className="bg-black text-white text-2xl">Cloths</option>
                                 <option value="furniture" className="bg-black text-white text-2xl">Furntiure</option>
                                 <option value="electronics" className="bg-black text-white text-2xl">Electronics</option>
+                                <option value="toys" className="bg-black text-white text-2xl">Toys</option>
+                                <option value="transports" className="bg-black text-white text-2xl">Transports</option>
                         </select>
                         <select  name="color" defaultValue="" value={color} onChange={onColorSelect} className="w-full  w-36 h-12 bg-white border-2 border-blue-400 "  >
                             <option value=""  disabled hidden>Choose here</option>
@@ -70,6 +72,8 @@ export default function Filter() {
                             <option value="yellow" className=" text-yellow-300 text-2xl">Yellow</option>
                             <option value="orange" className=" text-yellow-600 text-2xl">Orange</option>
                             <option value="black" className=" text-black text-2xl">Black</option>
+                            <option value="brown" className=" text-black text-2xl">Brown</option>
+                            <option value="white" className=" text-black text-2xl">White</option>
                         </select>
                         <select name="age" defaultValue="" value={ageGroup} onChange={onAgeGroupSelect} className="w-full appearance-none w-36 h-12 bg-white border-2 border-blue-400 "  >
                             <option value=""  disabled hidden>Choose here</option>
@@ -77,7 +81,8 @@ export default function Filter() {
                             <option value="kids" className="bg-black text-white text-2xl">Kids</option>
                             <option value="teens" className="bg-black text-white text-2xl">Teens</option>
                             <option value="adults" className="bg-black text-white text-2xl">Adults</option>
-                            <option value="old" className="bg-black text-white text-2xl">Old</option>    
+                            <option value="old" className="bg-black text-white text-2xl">Old</option>
+                            <option value="all" className="bg-black text-white text-2xl">All</option>        
                         </select>
                         <select name="gender" defaultValue="" value={gender} onChange={onGenderSelect} className="w-full appearance-none w-36 h-12 bg-white border-2 border-blue-400">
                             <option value=""  disabled hidden>Choose here</option>
