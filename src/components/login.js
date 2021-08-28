@@ -90,7 +90,7 @@ export default function Login() {
             <div className="fixed -bottom-60 left-60  w-96 h-96 bg-white  bg-opacity-10 transform -rotate-45"> </div>
             <div className="fixed bottom-40 -right-44  w-64 h-96 bg-black  bg-opacity-10 transform rotate-135"> </div>
 
-            <div className="bg-white h-full w-full self-center  md:w-4/5 md:h-4/5 lg:w-2/6 lg:h-4/5 px-10 py-6 z-20">
+            <div className="bg-white h-auto w-full self-center  md:w-4/5 md:my-16   lg:w-2/6  px-10 py-6 z-20">
                 <h1 className="text-6xl text-center pb-5 font-black ">Login</h1>
                 <div className="mb-10">
                     <div className="my-5">
