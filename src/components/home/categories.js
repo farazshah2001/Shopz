@@ -39,7 +39,7 @@ export default function Categories() {
                         </div>
                         <div onClick={()=>{fetchCategory("electronics","","teens","")}} className="hidden xl:block cursor-pointer h-40 md:h-60 bg-purple-600 hover:bg-purple-700 m-2 overflow-hidden flex justify-start hover:shadow-xl">
                             <div className="  h-40 w-40 md:h-60 md:w-60 transform rotate-45 -translate-x-20 bg-purple-300">
-                            <h1 className="text-4xl lg:text-5xl xl:text-6xl text-white font-bold  transform -rotate-45 translate-x-24 -translate-y-12 lg:translate-x-28 lg:-translate-y-16 ">Toys</h1>
+                            <h1 className="text-4xl lg:text-5xl xl:text-6xl text-white font-bold  transform -rotate-45 translate-x-24 -translate-y-12 lg:translate-x-28 lg:-translate-y-16 ">Gadgets</h1>
                             </div>
                         </div>
                         <div onClick={()=>{fetchCategory("","","old","")}} className="hidden xl:block cursor-pointer h-40 md:h-60 bg-gray-600 hover:bg-gray-700 m-2 overflow-hidden flex justify-start hover:shadow-xl">

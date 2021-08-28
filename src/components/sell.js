@@ -113,10 +113,10 @@ export default function Sell() {
                             <option value="blue" className=" text-blue-400 text-2xl">Blue</option>
                             <option value="green" className=" text-green-400 text-2xl">Green</option>
                             <option value="yellow" className=" text-yellow-300 text-2xl">Yellow</option>
-                            <option value="orange" className=" text-yellow-600 text-2xl">Orange</option>
+                            <option value="orange" className=" text-yellow-500 text-2xl">Orange</option>
                             <option value="black" className=" text-black text-2xl">Black</option>
-                            <option value="brown" className=" text-black text-2xl">Brown</option>
-                            <option value="white" className=" text-black text-2xl">White</option>
+                            <option value="brown" className=" text-yellow-700 text-2xl">Brown</option>
+                            <option value="white" className=" text-gray-300 text-2xl">White</option>
                         </select>
                         <select name="age" value={ageGroup} onChange={onAgeGroupSelect} className="w-full appearance-none w-36 h-12 bg-white border-2 border-blue-400 "  >
                             <option value="" selected disabled hidden>Choose here</option>

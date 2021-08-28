@@ -19,7 +19,7 @@ export default function Item({item}) {
 //////
     return (
         //<img src ={item.images[0]}></img>
-        <div onClick={itemClicked} className=" w-64 h-80 border-2 border-gray-800 bg-gray-100 mx-auto my-4">
+        <div onClick={itemClicked} className="cursor-pointer w-64 h-80 border-2 border-gray-800 bg-gray-100 mx-auto my-4">
             <img className="w-64 h-60" src={item.images[0]} ></img>
             <h1>{item.name}</h1>
             <p>${item.price}</p> 
