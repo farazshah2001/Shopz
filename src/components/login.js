@@ -43,6 +43,7 @@ export default function Login() {
     }
     
     const onFacebookLogin = (res) => {
+        console.log("facebok : ",res);
         setloginEmail(res.email);
         setloginPassword(res.userID);
         login(res.email,res.userID);

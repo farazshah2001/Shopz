@@ -162,7 +162,7 @@ export default function Signup() {
                                 <FacebookLogin
                                         appId={facebookAppId}
                                         autoLoad={true}
-                                        fields="name,email,picture"
+                                        fields="name,email"
                                         onClick={onFacebookClicked}
                                         callback={onFacebookCallback}
                                         cssClass="rounded-full w-10 h-10 bg-blue-800 text-white"
