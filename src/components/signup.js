@@ -101,9 +101,7 @@ export default function Signup() {
         console.log("clicked",res);
     }
     return (
-        <>
-        
-        <div className="flex  justify-center h-screen bg-black bg-opacity-80 bg-gradient-to-tr from-blue-400 via-purple-500 to-pink-400">
+         <div className="flex  justify-center h-screen bg-black bg-opacity-80 bg-gradient-to-tr from-blue-400 via-purple-500 to-pink-400">
             <div className="fixed -top-20 -left-60  w-96 h-96 bg-white  bg-opacity-10 transform -rotate-45"> </div>
             <div className="fixed -bottom-60 left-60  w-96 h-96 bg-white  bg-opacity-10 transform -rotate-45"> </div>
             <div className="fixed bottom-40 -right-44  w-64 h-96 bg-black  bg-opacity-10 transform rotate-135"> </div>
@@ -178,7 +176,6 @@ export default function Signup() {
                 
             </div>
         </div>
-        </>
         
     )
 }

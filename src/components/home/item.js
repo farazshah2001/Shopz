@@ -19,11 +19,15 @@ export default function Item({item}) {
 //////
     return (
         //<img src ={item.images[0]}></img>
-        <div onClick={itemClicked} className="cursor-pointer w-64 h-80 border-2 border-gray-800 bg-gray-100 mx-auto my-4">
+        <div onClick={itemClicked} className="cursor-pointer  border-2 border-gray-900 bg-gray-800 mx-auto my-4">
             <img className="w-64 h-60" src={item.images[0]} ></img>
-            <h1>{item.name}</h1>
-            <p>${item.price}</p> 
-            <p>{review}</p>
+            <div className='px-3 py-5 pb-3 space-y-q'>
+                <div className='flex justify-between'>
+                <h1 className='text-white font-bold'>{item.name}</h1>
+                <p className='text-white'>${item.price}</p> 
+                </div>
+                <p className='text-white font-black'>{review}</p>
+            </div>
         </div>
     )
 }

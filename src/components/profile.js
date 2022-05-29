@@ -79,7 +79,7 @@ function Display() {
     return (
         
         <div className="w-full pt-4  bg-white shadow-lg ">
-        <div className=" grid grid-cols-4">
+        <div className=" grid grid-cols-4 px-12">
             <div className="col-span-1 md:col-span-2 space-y-12">
                 <p className="text-gray-600 text-xl text-semibold">Name</p>
                 <p className="text-gray-600 text-xl text-semibold">Email</p>
@@ -90,11 +90,11 @@ function Display() {
                 <p className="text-2xl font-semibold">{user.name}</p>
                 <p className="text-xl md:text-2xl font-semibold">{user.email}</p>
                 <p className="text-2xl font-semibold">{user.password}</p>
-                <div className="w-11/12 md:w-3/4 p-2 md:p-8 border border-pink-700 divide-y divide-pink-700">
+                <div className="w-11/12 md:w-3/4 p-2 md:p-8 border border-gray-900 divide-y divide-gray-900">
                     {
                     user.addresses &&    user.addresses.map((addr)=>{
                         return(
-                            <div>
+                            <div className='px-12'>
                                 <div className=" grid grid-cols-4 mt-4 py-4  m-y-2 ">
                                     <div className="col-span-2 space-y-5">
                                         <p className="text-gray-600 text-xl text-semibold">House</p>
@@ -111,7 +111,7 @@ function Display() {
                                         <p  className="text-gray-800 text-xl md:text-2xl font-semibold">{addr.country}</p>
                                     </div>
                                 </div>
-                                <div onClick={()=>{deleteAddress(addr._id)}} className="flex justify-center"><button className="w-16 h-12 my-4 border-2 border-red-600 hover:bg-red-600 hover:text-white rounded">Delete</button></div>
+                                <div onClick={()=>{deleteAddress(addr._id)}} className="flex justify-center"><button className="w-16 h-12 my-4 border-2 border-gray-900 hover:bg-gray-900 hover:text-white rounded">Delete</button></div>
                                 
                             </div>
                                 
@@ -123,8 +123,8 @@ function Display() {
             </div>
         </div>
         <div className="flex justify-center">
-            <button onClick={()=>{setProfileDisplay("pass")}} className="mx-4 h-16 bg-pink-400 hover:bg-pink-700 rounded my-8 px-4">Change Password</button>
-            <button onClick={()=>{setProfileDisplay("address")}} className="mx-4 h-16 bg-pink-400 hover:bg-pink-700 rounded my-8 px-4">Add Address</button>
+            <button onClick={()=>{setProfileDisplay("pass")}} className="mx-4 h-16 bg-gray-900 hover:bg-gray-900 text-white rounded my-8 px-4 hover:shadow-xl">Change Password</button>
+            <button onClick={()=>{setProfileDisplay("address")}} className="mx-4 h-16 bg-gray-900 hover:bg-gray-900 text-white rounded my-8 px-4 hover:shadow-xl">Add Address</button>
         </div>
         </div>
     )

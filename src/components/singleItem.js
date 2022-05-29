@@ -66,15 +66,15 @@ export default function SingleItem() {
                     
                 </div>
                 <div className="flex justify-center">
-                    <button onClick={()=>{history.push('/buy')}} className="my-8 mx-4 w-24 h-16 bg-green-400 hover:bg-green-600 rounded text-white text-2xl">Buy</button>
-                    <Link to="/" ><button className="my-8 mx-4 w-24 h-16 bg-red-400 hover:bg-red-600 rounded text-white text-2xl">Back</button></Link>
+                    <button onClick={()=>{history.push('/buy')}} className="my-8 mx-4 w-24 h-16 bg-gray-900 hover:bg-gray-900 rounded text-white text-2xl">Buy</button>
+                    <Link to="/" ><button className="my-8 mx-4 w-24 h-16 bg-gray-900 hover:bg-gray-900 rounded text-white text-2xl">Back</button></Link>
                 </div>
             </div>
             
             <div className="mx-auto ">
                 <div className="border-2 border-gray-400 px-8 py-4">
                     <h1 className="text-4xl text-semibold border-b-2 border-gray-600 text-center mb-8">Reviews</h1>
-                   <div className="divide-y divide-light-blue-400">
+                   <div className="divide-y divide-light-gray-900">
                     {singleItem.reviews &&
                         singleItem.reviews.map((review)=>{
                             return(
@@ -87,7 +87,7 @@ export default function SingleItem() {
                     }
                    </div>
                    {reviewDisplay && <ReviewForm itemId={singleItem._id} />}
-                   {!reviewDisplay && loggedUser && canReview && <button onClick={()=>{reviewDToggle(true)}} className="w-full h-12 bg-blue-400 hover:bg-blue-500 rounded mt-2">Add review</button>}
+                   {!reviewDisplay && loggedUser && canReview && <button onClick={()=>{reviewDToggle(true)}} className="w-full h-12 bg-gray-900 hover:bg-gray-900 text-white hover:shadow-2xl rounded mt-2">Add review</button>}
                 </div>
             </div>
         </div>

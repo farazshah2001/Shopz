@@ -136,10 +136,10 @@ export default function Sell() {
                         <p>Description  </p>  
                     </div>
                     <div className="col-span-2 space-y-4">
-                        <input type="text" value={name} onChange={onNameChange} className={` w-full ${nameerror ? ' border-red-600 ' :'border-blue-400'}`}></input>
-                        <input type="text" value={imageUrl} onChange={onImageUrlChange} className={`w-full  ${imageerror ? ' border-red-600 ' :'border-blue-400'}`}></input>
-                        <input type="text" value={price} onChange={onPriceChange} className={`w-full  ${priceerror ? ' border-red-600 ' :'border-blue-400'}`}></input>
-                        <select name="category" value={category} onChange={onCategorySelect} className={`${categoryerror ? ' border-red-600 ' :'border-blue-400'} w-full  w-36 h-12 bg-white border-2  `}  >
+                        <input type="text" value={name} onChange={onNameChange} className={` w-full ${nameerror ? ' border-red-600 ' :'border-gray-900'}`}></input>
+                        <input type="text" value={imageUrl} onChange={onImageUrlChange} className={`w-full  ${imageerror ? ' border-red-600 ' :'border-gray-900'}`}></input>
+                        <input type="text" value={price} onChange={onPriceChange} className={`w-full  ${priceerror ? ' border-red-600 ' :'border-gray-900'}`}></input>
+                        <select name="category" value={category} onChange={onCategorySelect} className={`${categoryerror ? ' border-red-600 ' :'border-gray-900'} w-full  w-36 h-12 bg-white border-2  `}  >
                                 <option value="" selected disabled hidden>Choose here</option>
                                 <option value="sport" className=" bg-black text-white text-2xl">Sport</option>
                                 <option value="cloths" className="bg-black text-white text-2xl">Cloths</option>
@@ -148,7 +148,7 @@ export default function Sell() {
                                 <option value="toys" className="bg-black text-white text-2xl">Toys</option>
                                 <option value="transports" className="bg-black text-white text-2xl">Transports</option>
                         </select>
-                        <select  name="color" value={color} onChange={onColorSelect}  className={`${colorerror ? ' border-red-600 ' :'border-blue-400'} w-full appearance-none w-36 h-12 bg-white border-2  `}  >
+                        <select  name="color" value={color} onChange={onColorSelect}  className={`${colorerror ? ' border-red-600 ' :'border-gray-900'} w-full appearance-none w-36 h-12 bg-white border-2  `}  >
                             <option value="" selected disabled hidden>Choose here</option>
                             <option value="pink" className=" text-pink-400 text-2xl">Pink</option>
                             <option value="red" className=" text-red-400 text-2xl">Red</option>
@@ -160,7 +160,7 @@ export default function Sell() {
                             <option value="brown" className=" text-yellow-700 text-2xl">Brown</option>
                             <option value="white" className=" text-gray-300 text-2xl">White</option>
                         </select>
-                        <select name="age" value={ageGroup} onChange={onAgeGroupSelect} className={`${ageerror ? ' border-red-600 ' :'border-blue-400'} w-full  appearance-none w-36 h-12 bg-white border-2  `}  >
+                        <select name="age" value={ageGroup} onChange={onAgeGroupSelect} className={`${ageerror ? ' border-red-600 ' :'border-gray-900'} w-full  appearance-none w-36 h-12 bg-white border-2  `}  >
                             <option value="" selected disabled hidden>Choose here</option>
                             <option value="babies" className="w-36 bg-black text-white text-2xl">Babies</option>
                             <option value="kids" className="bg-black text-white text-2xl">Kids</option>
@@ -169,18 +169,18 @@ export default function Sell() {
                             <option value="old" className="bg-black text-white text-2xl">Old</option> 
                             <option value="all" className="bg-black text-white text-2xl">All</option>    
                         </select>
-                        <select name="gender" value={gender} onChange={onGenderSelect} className={`${gendererror ? ' border-red-600 ' :'border-blue-400'} w-full appearance-none w-36 h-12 bg-white border-2 `}>
+                        <select name="gender" value={gender} onChange={onGenderSelect} className={`${gendererror ? ' border-red-600 ' :'border-gray-900'} w-full appearance-none w-36 h-12 bg-white border-2 `}>
                             <option value="" selected disabled hidden>Choose here</option>
-                            <option value="male" className="bg-white text-blue-400 text-2xl">Male</option>
+                            <option value="male" className="bg-white text-gray-900 text-2xl">Male</option>
                             <option value="female" className="bg-white text-pink-400 text-2xl">Female</option>
                             <option value="neutral" className="bg-white text-black text-2xl">Neutral</option>
                         </select>
-                        <textarea type="text" value={description} onChange={onDescriptionChange} className={`${descriptionerror ? ' border-red-600 ' :'border-blue-400'} w-full border-2  w-36 h-24`}></textarea>
+                        <textarea type="text" value={description} onChange={onDescriptionChange} className={`${descriptionerror ? ' border-red-600 ' :'border-gray-900'} w-full border-2  w-36 h-24`}></textarea>
                     </div>
                 </div>
                <div className="flex justify-center space-x-4">
-                    <button onClick={sellItem} className="mt-12 w-32 h-16 text-2xl bg-blue-500 hover:bg-blue-600 rounded">Sell</button>
-                    <Link to="/"><button className="mt-12 w-32 h-16 text-2xl bg-red-500 hover:bg-red-600 rounded">Back</button></Link>
+                    <button onClick={sellItem} className="mt-12 w-32 h-16 text-2xl bg-gray-900 hover:bg-gray-900 rounded text-white hover:shadow-2xl">Sell</button>
+                    <Link to="/"><button className="mt-12 w-32 h-16 text-2xl bg-gray-900 hover:bg-gray-900 rounded text-white hover:shadow-2xl">Back</button></Link>
                </div>
             </form>     
         </div>
