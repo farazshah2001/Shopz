@@ -112,7 +112,7 @@ export default function Signup() {
                     <div className="mb-3">
                         <p className="font-semibold transform translate-y-5">Name</p>
                         <BsPerson className=" w-6 h-6    transform translate-y-9 " />
-                        <input type="text" placeholder="Type your  name" value={signupName} onChange={onNameChange}
+                        <input test-id='signup-name' type="text" placeholder="Type your  name" value={signupName} onChange={onNameChange}
                             className={`h-10 w-full border-b border-gray-400 pl-10 focus:border-blue-500 focus:border-b-2
                             ${nameE ? "border-red-600 text-red-800" : ""} `} >
                         </input>
@@ -121,7 +121,7 @@ export default function Signup() {
                     <div className="mb-3">
                         <p className="font-semibold transform translate-y-5">Email</p>
                         <HiOutlineMail className=" w-6 h-6    transform translate-y-9 " />
-                        <input type="email" placeholder="Type your  email" value={signupEmail} onChange={onEmailChange}
+                        <input test-id='signup-email'  type="email" placeholder="Type your  email" value={signupEmail} onChange={onEmailChange}
                               className={`h-10 w-full border-b border-gray-400 pl-10 focus:border-blue-500 focus:border-b-2
                             ${emailE ? "border-red-600 text-red-800" : ""} `} >
                         </input>
@@ -130,7 +130,7 @@ export default function Signup() {
                     <div className="mb-3">
                         <p className="font-semibold transform translate-y-5">Password</p>
                         <BsLock className=" w-6 h-6    transform translate-y-9 " />
-                        <input type="password" placeholder="Type your password" value={signupPassword} onChange={onPasswordChange}
+                        <input test-id='signup-password'  type="password" placeholder="Type your password" value={signupPassword} onChange={onPasswordChange}
                              className={`h-10 w-full border-b border-gray-400 pl-10 focus:border-blue-500 focus:border-b-2
                             ${emailE ? "border-red-600 text-red-800" : ""} `} >
                         </input>
@@ -138,7 +138,7 @@ export default function Signup() {
                     </div>                   
                    
                     <div className="flex justify-center">
-                        <button onClick={()=>{signup(signupName,signupEmail,signupPassword)}} className="bg-red-600 rounded-full w-5/6 h-10 text-white bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500">SIGNUP</button>
+                        <button   test-id='signup-button' onClick={()=>{signup(signupName,signupEmail,signupPassword)}} className="bg-red-600 rounded-full w-5/6 h-10 text-white bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500">SIGNUP</button>
                     </div>                    
                 </div>
                 {/* <div className="text-center">

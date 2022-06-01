@@ -147,7 +147,7 @@ export default function Login() {
                     
                 </div> */}
                 <div className='w-full text-center'>
-                <Link to="/signup"><p className={` font-bold text-pink-600 mt-8`}>Signup</p></Link>     
+                <Link test-id='signup-link' to="/signup"><p className={` font-bold text-pink-600 mt-8`}>Signup</p></Link>     
 
                 </div>
                 
