@@ -90,7 +90,7 @@ function Display() {
                 <p className="text-2xl font-semibold">{user.name}</p>
                 <p className="text-xl md:text-2xl font-semibold">{user.email}</p>
                 <p className="text-2xl font-semibold">{user.password}</p>
-                <div className="w-11/12 md:w-3/4 p-2 md:p-8 border border-gray-900 divide-y divide-gray-900">
+                <div className="w-11/12 md:w-3/4 p-2 md:p-8 border border-red-600 divide-y divide-gray-900">
                     {
                     user.addresses &&    user.addresses.map((addr)=>{
                         return(
@@ -111,7 +111,7 @@ function Display() {
                                         <p  className="text-gray-800 text-xl md:text-2xl font-semibold">{addr.country}</p>
                                     </div>
                                 </div>
-                                <div onClick={()=>{deleteAddress(addr._id)}} className="flex justify-center"><button className="w-16 h-12 my-4 border-2 border-gray-900 hover:bg-gray-900 hover:text-white rounded">Delete</button></div>
+                                <div onClick={()=>{deleteAddress(addr._id)}} className="flex justify-center"><button className="w-16 h-12 my-4 border-2 border-red-600 hover:bg-red-600 hover:text-white rounded">Delete</button></div>
                                 
                             </div>
                                 
@@ -123,8 +123,8 @@ function Display() {
             </div>
         </div>
         <div className="flex justify-center">
-            <button onClick={()=>{setProfileDisplay("pass")}} className="mx-4 h-16 bg-gray-900 hover:bg-gray-900 text-white rounded my-8 px-4 hover:shadow-xl">Change Password</button>
-            <button onClick={()=>{setProfileDisplay("address")}} className="mx-4 h-16 bg-gray-900 hover:bg-gray-900 text-white rounded my-8 px-4 hover:shadow-xl">Add Address</button>
+            <button onClick={()=>{setProfileDisplay("pass")}} className="mx-4 h-16 bg-red-600 hover:bg-red-600 text-white rounded my-8 px-4 hover:shadow-xl">Change Password</button>
+            <button onClick={()=>{setProfileDisplay("address")}} className="mx-4 h-16 bg-red-600 hover:bg-red-600 text-white rounded my-8 px-4 hover:shadow-xl">Add Address</button>
         </div>
         </div>
     )
@@ -180,7 +180,7 @@ function Display() {
     return (
 
         <div className="flex justify-center">
-            <div className=" mt-12 bg-white shadow-lg w-11/12 md:w-3/4 p-2 md:p-8 border border-gray-900">
+            <div className=" mt-12 bg-white shadow-lg w-11/12 md:w-3/4 p-2 md:p-8 border border-red-600">
                 <div className=" grid grid-cols-4 ">
                     <div className="col-span-2 space-y-16">
                         <p className="text-gray-600 text-xl text-semibold">Old password</p>
@@ -197,8 +197,8 @@ function Display() {
                     </div>
                 </div>
                 <div className="flex justify-center my-12">
-                    <button onClick={changePassword} className="h-16 w-24 mx-4 border-2 border-gray-900 hover:bg-gray-900  hover:text-white rounded  px-4">Change </button>
-                    <button onClick={()=>{setProfileDisplay("profile")}} className="h-16 w-24 mx-4 border-2 border-gray-900 hover:bg-gray-900 hover:text-white rounded px-4">Back </button>
+                    <button onClick={changePassword} className="h-16 w-24 mx-4 border-2 border-red-600 hover:bg-red-600  hover:text-white rounded  px-4">Change </button>
+                    <button onClick={()=>{setProfileDisplay("profile")}} className="h-16 w-24 mx-4 border-2 border-red-600 hover:bg-red-600 hover:text-white rounded px-4">Back </button>
                 </div>
             </div>
         </div>
@@ -271,7 +271,7 @@ function Display() {
     
     return (
         <div className="flex justify-center ">
-            <div className="bg-white shadow-lg w-11/12 md:w-3/4 p-2 md:p-8 border border-gray-900 my-8">
+            <div className="bg-white shadow-lg w-11/12 md:w-3/4 p-2 md:p-8 border border-red-600 my-8">
                 <div className=" grid grid-cols-4 mt-2">
                         <div className="col-span-2 space-y-14">
                             <p className="text-gray-600 text-xl text-semibold">House</p>
@@ -304,8 +304,8 @@ function Display() {
                         </div>
                     </div>
                 <div className="flex justify-center mt-12">
-                        <button onClick={addAddr} className="h-16 w-24 mx-4 border-2 border-gray-900 hover:bg-gray-900  hover:text-white rounded  px-4">Add </button>
-                        <button onClick={()=>{setProfileDisplay("profile")}} className="h-16 w-24 mx-4 border-2 border-gray-900 hover:bg-gray-900 hover:text-white rounded px-4">Back </button>
+                        <button onClick={addAddr} className="h-16 w-24 mx-4 border-2 border-red-600 hover:bg-red-600  hover:text-white rounded  px-4">Add </button>
+                        <button onClick={()=>{setProfileDisplay("profile")}} className="h-16 w-24 mx-4 border-2 border-red-600 hover:bg-red-600 hover:text-white rounded px-4">Back </button>
                 </div>
             </div>
         </div>

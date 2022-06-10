@@ -42,19 +42,11 @@ export default function Filter() {
     return(
         
         <div className='px-6 transform translate-y-4'>
-        <h1 className="text-2xl text-gray-900 font-semibold md:border-b-4 border-gray-900 mb-4">Filter your results</h1>
-        <div className=" grid grid-cols-4">
-                    <div className="col-span-2 space-y-12">
-                        {/* <p>item  name</p> */}
-                        <p>Category  </p>
-                        <p>Color  </p>
-                        <p>Age group  </p>
-                        <p>Gender  </p>
-                         
-                    </div>
-                    <div className="col-span-2 space-y-6">
-                        {/* <input type="text" value={name} onChange={onNameChange} className="border-gray-900 w-full"></input> */}
-                        <select test-id='category-filter' name="category" defaultValue="" value={category} onChange={onCategorySelect} className="w-full   bg-white border-2  border-gray-900"  >
+        <h1 className="text-2xl text-red-600 font-semibold md:border-b-4 border-red-600 mb-4">Filter your results</h1>
+        <div className=" grid grid-cols-8 space-x-4">
+                    <div className='col-span-12 lg:col-span-2  space-y-4'>
+                    <p>Category  </p>
+                    <select test-id='category-filter' name="category" defaultValue="" value={category} onChange={onCategorySelect} className="w-full   bg-white border-2  border-red-600"  >
                                 <option value=""  disabled hidden>Choose here</option>
                                 <option value="sport" className=" bg-black text-white text-2xl">Sport</option>
                                 <option value="cloths" className="bg-black text-white text-2xl">Cloths</option>
@@ -63,7 +55,10 @@ export default function Filter() {
                                 <option value="toys" className="bg-black text-white text-2xl">Toys</option>
                                 <option value="transports" className="bg-black text-white text-2xl">Transports</option>
                         </select>
-                        <select  test-id='color-filter'  name="color" defaultValue="" value={color} onChange={onColorSelect} className="w-full  bg-white border-2 border-gray-900 "  >
+                    </div>
+                    <div className='col-span-12 lg:col-span-2  space-y-4'>
+                    <p>Color  </p>
+                    <select  test-id='color-filter'  name="color" defaultValue="" value={color} onChange={onColorSelect} className="w-full  bg-white border-2 border-red-600 "  >
                             <option value=""  disabled hidden>Choose here</option>
                             <option value="pink" className=" text-pink-400 text-2xl">Pink</option>
                             <option value="red" className=" text-red-400 text-2xl">Red</option>
@@ -75,7 +70,10 @@ export default function Filter() {
                             <option value="brown" className=" text-blue-700 text-2xl">Brown</option>
                             <option value="white" className=" text-gray-300 text-2xl">White</option>
                         </select>
-                        <select  test-id='age-filter'  name="age" defaultValue="" value={ageGroup} onChange={onAgeGroupSelect} className="w-full appearance-none bg-white border-2 border-gray-900 "  >
+                    </div>
+                    <div className='col-span-12 lg:col-span-2  space-y-4'>
+                    <p>Age group  </p>
+                    <select  test-id='age-filter'  name="age" defaultValue="" value={ageGroup} onChange={onAgeGroupSelect} className="w-full appearance-none bg-white border-2 border-red-600 "  >
                             <option value=""  disabled hidden>Choose here</option>
                             <option value="babies" className="w-36 bg-black text-white text-2xl">Babies</option>
                             <option value="kids" className="bg-black text-white text-2xl">Kids</option>
@@ -84,17 +82,19 @@ export default function Filter() {
                             <option value="old" className="bg-black text-white text-2xl">Old</option>
                             <option value="all" className="bg-black text-white text-2xl">All</option>        
                         </select>
-                        <select  test-id='gender-filter'  name="gender" defaultValue="" value={gender} onChange={onGenderSelect} className="w-full appearance-none bg-white border-2 border-gray-900">
+                    </div>
+                    <div className='col-span-12 lg:col-span-2  space-y-4'>
+                    <p>Gender  </p>
+                    <select  test-id='gender-filter'  name="gender" defaultValue="" value={gender} onChange={onGenderSelect} className="w-full appearance-none bg-white border-2 border-red-600">
                             <option value=""  disabled hidden>Choose here</option>
                             <option value="male" className="bg-white text-blue-400 text-2xl">Male</option>
                             <option value="female" className="bg-white text-pink-400 text-2xl">Female</option>
                             <option value="neutral" className="bg-white text-black text-2xl">Neutral</option>
                         </select>
-                        
                     </div>
                 </div>
                 <div className="flex justify-center pb-6">
-                    <button test-id='resetFilter-button' onClick={reset} className="w-full h-12 bg-gray-900 hover:bg-gray-900 rounded mt-8 text-2xl text-white">Reset all filters</button>
+                    <button test-id='resetFilter-button' onClick={reset} className="w-60 h-12 bg-red-600 hover:bg-red-600 rounded mt-8 text-2xl text-white">Reset all filters</button>
                 </div>
                 
                </div>

@@ -7,64 +7,64 @@ export default function Categories() {
         <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-4 py-12">
 
         <div test-id='categories-container' class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div test-id='men-cloths-category' onClick={()=>{fetchCategory("cloths","male","","")}} class="  w-full cursor-pointer bg-gray-900 rounded-lg sahdow-lg p-12 flex flex-col justify-center items-center">
-                <div class="mb-8">
+            <div test-id='men-cloths-category' onClick={()=>{fetchCategory("cloths","male","","")}} class="  w-full cursor-pointer bg-red-600 rounded-lg sahdow-lg p-12 flex flex-col justify-center items-center">
+                <div class="mb-0">
                     {/* <div class=" bg-accent text-accent-content border-4 border-accent w-12 h-12 lg:w-16 lg:h-16 rounded-full bg-white" ></div> */}
-                    <img className=' w-12 h-12 lg:w-16 lg:h-16 rounded-full' src='/favicon.ico'></img>
+                   {/* { <img className=' w-12 h-12 lg:w-16 lg:h-16 rounded-full' src='/favicon.ico'></img>} */}
                 </div>
                 <div class="text-center">
                     <p test-id='men-cloths-category-text' class="text-xl text-white font-bold mb-2  hover:text-3xl">Men Cloths</p>
-                    <p class="text-base text-gray-400 font-normal">________________________________________</p>
+                    {/* <p class="text-base text-gray-400 font-normal">________________________________________</p> */}
                 </div>
             </div>
-            <div onClick={()=>{fetchCategory("cloths","female","","")}} class="w-full cursor-pointer bg-gray-900 rounded-lg sahdow-lg p-12 flex flex-col justify-center items-center">
-                <div class="mb-8">
+            <div onClick={()=>{fetchCategory("cloths","female","","")}} class="w-full cursor-pointer bg-red-600 rounded-lg sahdow-lg p-12 flex flex-col justify-center items-center">
+                <div class="mb-0">
                     {/* <div class=" bg-accent text-accent-content border-4 border-accent w-12 h-12 lg:w-16 lg:h-16 rounded-full bg-white" ></div> */}
-                    <img className=' w-12 h-12 lg:w-16 lg:h-16 rounded-full' src='/favicon.ico'></img>
+                   {/* { <img className=' w-12 h-12 lg:w-16 lg:h-16 rounded-full' src='/favicon.ico'></img>} */}
                 </div>
                 <div class="text-center">
                     <p class="text-xl text-white font-bold mb-2  hover:text-3xl">Female Fashion</p>
-                    <p class="text-base text-gray-400 font-normal">________________________________________</p>
+                    {/* <p class="text-base text-gray-400 font-normal">________________________________________</p> */}
                 </div>
             </div>
-            <div onClick={()=>{fetchCategory("sport","","","")}} class="w-full cursor-pointer bg-gray-900 rounded-lg sahdow-lg p-12 flex flex-col justify-center items-center">
-                <div class="mb-8">
+            <div onClick={()=>{fetchCategory("sport","","","")}} class="w-full cursor-pointer bg-red-600 rounded-lg sahdow-lg p-12 flex flex-col justify-center items-center">
+                <div class="mb-0">
                     {/* <div class=" bg-accent text-accent-content border-4 border-accent w-12 h-12 lg:w-16 lg:h-16 rounded-full bg-white" ></div> */}
-                    <img className=' w-12 h-12 lg:w-16 lg:h-16 rounded-full' src='/favicon.ico'></img>
+                   {/* { <img className=' w-12 h-12 lg:w-16 lg:h-16 rounded-full' src='/favicon.ico'></img>} */}
                 </div>
                 <div class="text-center">
                     <p class="text-xl text-white font-bold mb-2  hover:text-3xl">Sports</p>
-                    <p class="text-base text-gray-400 font-normal">________________________________________</p>
+                    {/* <p class="text-base text-gray-400 font-normal">________________________________________</p> */}
                 </div>
             </div>
-            <div onClick={()=>{fetchCategory("","","kids","")}} class="w-full cursor-pointer bg-gray-900 rounded-lg sahdow-lg p-12 flex flex-col justify-center items-center">
-                <div class="mb-8">
+            <div onClick={()=>{fetchCategory("","","kids","")}} class="w-full cursor-pointer bg-red-600 rounded-lg sahdow-lg p-12 flex flex-col justify-center items-center">
+                <div class="mb-0">
                     {/* <div class=" bg-accent text-accent-content border-4 border-accent w-12 h-12 lg:w-16 lg:h-16 rounded-full bg-white" ></div> */}
-                    <img className=' w-12 h-12 lg:w-16 lg:h-16 rounded-full' src='/favicon.ico'></img>
+                   {/* { <img className=' w-12 h-12 lg:w-16 lg:h-16 rounded-full' src='/favicon.ico'></img>} */}
                 </div>
                 <div class="text-center">
                     <p class="text-xl text-white font-bold mb-2  hover:text-3xl">Kids</p>
-                    <p class="text-base text-gray-400 font-normal">________________________________________</p>
+                    {/* <p class="text-base text-gray-400 font-normal">________________________________________</p> */}
                 </div>
             </div>
-            <div onClick={()=>{fetchCategory("electronics","","","")}} class="w-full cursor-pointer bg-gray-900 rounded-lg sahdow-lg p-12 flex flex-col justify-center items-center">
-                <div class="mb-8">
+            <div onClick={()=>{fetchCategory("electronics","","","")}} class="w-full cursor-pointer bg-red-600 rounded-lg sahdow-lg p-12 flex flex-col justify-center items-center">
+                <div class="mb-0">
                     {/* <div class=" bg-accent text-accent-content border-4 border-accent w-12 h-12 lg:w-16 lg:h-16 rounded-full bg-white" ></div> */}
-                    <img className=' w-12 h-12 lg:w-16 lg:h-16 rounded-full' src='/favicon.ico'></img>
+                   {/* { <img className=' w-12 h-12 lg:w-16 lg:h-16 rounded-full' src='/favicon.ico'></img>} */}
                 </div>
                 <div class="text-center">
                     <p class="text-xl text-white font-bold mb-2  hover:text-3xl">Electronics</p>
-                    <p class="text-base text-gray-400 font-normal">________________________________________</p>
+                    {/* <p class="text-base text-gray-400 font-normal">________________________________________</p> */}
                 </div>
             </div>
-            <div onClick={()=>{fetchCategory("furniture","","","")}} class="w-full cursor-pointer bg-gray-900 rounded-lg sahdow-lg p-12 flex flex-col justify-center items-center">
-                <div class="mb-8">
+            <div onClick={()=>{fetchCategory("furniture","","","")}} class="w-full cursor-pointer bg-red-600 rounded-lg sahdow-lg p-12 flex flex-col justify-center items-center">
+                <div class="mb-0">
                     {/* <div class=" bg-accent text-accent-content border-4 border-accent w-12 h-12 lg:w-16 lg:h-16 rounded-full bg-white" ></div> */}
-                    <img className=' w-12 h-12 lg:w-16 lg:h-16 rounded-full' src='/favicon.ico'></img>
+                   {/* { <img className=' w-12 h-12 lg:w-16 lg:h-16 rounded-full' src='/favicon.ico'></img>} */}
                 </div>
                 <div class="text-center">
                     <p class="text-xl text-white font-bold mb-2  hover:text-3xl">Furniture</p>
-                    <p class="text-base text-gray-400 font-normal">________________________________________</p>
+                    {/* <p class="text-base text-gray-400 font-normal">________________________________________</p> */}
                 </div>
             </div>
         </div>
