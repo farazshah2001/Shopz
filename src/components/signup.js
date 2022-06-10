@@ -135,7 +135,7 @@ export default function Signup() {
                     </div>                   
                    
                     <div className="flex justify-center">
-                        <button   test-id='signup-button' onClick={()=>{signup(signupName,signupEmail,signupPassword)}} className=" text-red-600 rounded-full w-40 h-10 text-white bg-white ">SIGNUP</button>
+                        <button   test-id='signup-button' onClick={()=>{signup(signupName,signupEmail,signupPassword)}} className=" text-red-600 rounded-full w-40 h-10  bg-white ">SIGNUP</button>
                     </div>                    
                 </div>
                 <div className='w-full text-center'>

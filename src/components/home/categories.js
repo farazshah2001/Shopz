@@ -13,7 +13,7 @@ export default function Categories() {
                    {/* { <img className=' w-12 h-12 lg:w-16 lg:h-16 rounded-full' src='/favicon.ico'></img>} */}
                 </div>
                 <div class="text-center">
-                    <p test-id='men-cloths-category-text' class="text-xl text-white font-bold mb-2  hover:text-3xl">Men Cloths</p>
+                    <p test-id='men-cloths-category-text' class="text-xl text-white font-bold mb-2  hover:text-3xl">Men </p>
                     {/* <p class="text-base text-gray-400 font-normal">________________________________________</p> */}
                 </div>
             </div>
@@ -23,7 +23,7 @@ export default function Categories() {
                    {/* { <img className=' w-12 h-12 lg:w-16 lg:h-16 rounded-full' src='/favicon.ico'></img>} */}
                 </div>
                 <div class="text-center">
-                    <p class="text-xl text-white font-bold mb-2  hover:text-3xl">Female Fashion</p>
+                    <p class="text-xl text-white font-bold mb-2  hover:text-3xl"> Fashion</p>
                     {/* <p class="text-base text-gray-400 font-normal">________________________________________</p> */}
                 </div>
             </div>

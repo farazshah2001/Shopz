@@ -37,7 +37,7 @@ export default function SingleItem() {
     }, [])
     
     return (
-        <div className="p-4 m-6  bg-gray-100 lg:grid lg:grid-cols-5">
+        <div className="p-4 m-6   lg:grid lg:grid-cols-5">
             <div className="border lg:col-span-4" >
                 <h1 className="text-center text-2xl mb-4">{singleItem.name}</h1>
                 <div className="">
