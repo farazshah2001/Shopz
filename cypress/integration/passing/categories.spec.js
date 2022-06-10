@@ -1,7 +1,11 @@
 /// <reference types="cypress" />
 
 // import { expect } from "chai";
-
+Cypress.on('uncaught:exception', (err, runnable) => {
+  // returning false here prevents Cypress from
+// failing the test
+  return false
+})
 
 
 describe('number of categories', () => {
@@ -20,7 +24,7 @@ describe('category info', () => {
     })
   
     it('text should be mens cloth', () => {
-      cy.get('[test-id=men-cloths-category-text]').should('have.text','Men Cloths')
+      cy.get('[test-id=men-cloths-category-text]').should('have.text','Men')
     })
 })
 
