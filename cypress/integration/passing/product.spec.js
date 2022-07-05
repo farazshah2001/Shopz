@@ -8,7 +8,7 @@ describe('product', () => {
     beforeEach(() => {
       cy.visit('http://localhost:3000/')
       cy.get('[test-id=login-link]').click().then(()=>{
-        cy.get('[test-id=email-input]').type('farazshah2001@gmail.com')
+        cy.get('[test-id=email-input]').type('ahmed@gmail.com')
         cy.get('[test-id=password-input]').type('pass123')
         cy.get('[test-id=login-button]').click()
       })

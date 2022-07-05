@@ -86,24 +86,21 @@ export default function Login() {
     return (
         <>
         
-        <div className="flex  justify-center h-screen bg-black bg-opacity-80 bg-gradient-to-tr from-blue-400 via-purple-500 to-pink-400">
-            <div className="fixed -top-20 -left-60  w-96 h-96 bg-white  bg-opacity-10 transform -rotate-45"> </div>
-            <div className="fixed -bottom-60 left-60  w-96 h-96 bg-white  bg-opacity-10 transform -rotate-45"> </div>
-            <div className="fixed bottom-40 -right-44  w-64 h-96 bg-black  bg-opacity-10 transform rotate-135"> </div>
+        <div className="flex  justify-center h-screen bg-black bg-opacity-80 bg-white">
 
-            <div className="bg-white h-auto w-full self-center  md:w-4/5 md:my-16   lg:w-2/6  px-10 py-6 z-20">
-                <h1 className="text-6xl text-center pb-5 font-black ">Login</h1>
+            <div className="rounded bg-red-600 h-auto w-full self-center  md:w-4/5 md:my-16   lg:w-1/2  px-10 py-6 z-20">
+                <h1 className="text-6xl text-white text-center pb-5 font-black ">Login</h1>
                 <div className="mb-10">
                     <div className="my-5">
-                        <p className="font-semibold transform translate-y-5">Email</p>
+                        <p className="font-semibold  text-white transform translate-y-5">Email</p>
                         <HiOutlineMail className=" w-6 h-6    transform translate-y-9 " />
                         <input test-id='email-input' type="email" placeholder="Type your  email" name="email" value={loginEmail} onChange={onEmailChange}
-                                className={`h-10 w-full border-b border-gray-400 pl-10 focus:border-blue-500 focus:border-b-2  ${emailE ? "border-red-600 text-red-800" : ""} `}>
+                                className={`h-10  w-full border-b border-gray-400 pl-10 focus:border-blue-500 focus:border-b-2  ${emailE ? "border-red-600 text-red-800" : ""} `}>
                          </input>
                          {emailE && <p className="text-red-600">Invalid email</p>}
                     </div>
                     <div className="my-5">
-                        <p className="font-semibold transform translate-y-5">Password</p>
+                        <p className="font-semibold  text-white transform translate-y-5">Password</p>
                         <BsLock className=" w-6 h-6    transform translate-y-9 " />
                         <input test-id='password-input' type="password" placeholder="Type your password" name="password" value={loginPassword} onChange={onPasswordChange}
                          className={`h-10 w-full border-b border-gray-400 pl-10 focus:border-blue-500 focus:border-b-2 ${passE ? "border-red-600 text-red-800" : ""} `}>
@@ -113,41 +110,11 @@ export default function Login() {
                     </div>                   
                    
                     <div className="flex justify-center">
-                        <button test-id='login-button' onClick={()=>{login(loginEmail,loginPassword)}} className="bg-red-600 rounded-full w-5/6 h-10 text-white bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500">LOGIN</button>
+                        <button test-id='login-button' onClick={()=>{login(loginEmail,loginPassword)}} className="bg-white rounded-full w-40 h-10 text-red-600 ">LOGIN</button>
                     </div>                    
                 </div>
-                {/* <div className="text-center">
-                    <p>Or login using</p>
-                    <div className="flex flex-row justify-center mt-2">
-                            <div className="mx-2">
-                                <GoogleLogin
-                                    clientId={googleClientId}
-                                    render={renderProps => (
-                                    <button onClick={renderProps.onClick} disabled={renderProps.disabled} className="text-2xl bg-gray-100 rounded-full w-10 h-10 pl-2 "><FcGoogle /></button>
-                                    )}
-                                    buttonText=""
-                                    onSuccess={onLoginSuccess}
-                                    onFailure={onLoginFailure}
-                                    cookiePolicy={'single_host_origin'}
-                                />
-                            </div>
-                            <div className="mx-2">
-                                <FacebookLogin
-                                        appId={facebookAppId}
-                                        autoLoad={true}
-                                        fields="name,email,picture"
-                                        onClick={onFacebookClicked}
-                                        callback={onFacebookLogin}
-                                        cssClass="rounded-full w-10 h-10 bg-blue-800 text-white"
-                                        textButton=""
-                                        icon="fa-facebook" />
-                            </div>
-                    </div>
-                    
-                    
-                </div> */}
                 <div className='w-full text-center'>
-                <Link test-id='signup-link' to="/signup"><p className={` font-bold text-pink-600 mt-8`}>Signup</p></Link>     
+                <Link test-id='signup-link' to="/signup"><p className={` font-bold hover:text-black text-white mt-8`}>Signup</p></Link>     
 
                 </div>
                 

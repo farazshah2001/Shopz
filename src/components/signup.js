@@ -101,13 +101,10 @@ export default function Signup() {
     //     console.log("clicked",res);
     // }
     return (
-         <div className="flex  justify-center h-screen bg-black bg-opacity-80 bg-gradient-to-tr from-blue-400 via-purple-500 to-pink-400">
-            <div className="fixed -top-20 -left-60  w-96 h-96 bg-white  bg-opacity-10 transform -rotate-45"> </div>
-            <div className="fixed -bottom-60 left-60  w-96 h-96 bg-white  bg-opacity-10 transform -rotate-45"> </div>
-            <div className="fixed bottom-40 -right-44  w-64 h-96 bg-black  bg-opacity-10 transform rotate-135"> </div>
+         <div className="flex  justify-center h-screen bg-black bg-opacity-80 bg-white">
 
-            <div className="bg-white h-autp w-full self-center  md:w-4/5  lg:w-2/6   px-10 py-6 z-20 ">
-                <h1 className="text-5xl text-center pb-5 font-black ">Signup</h1>
+            <div className="bg-red-600 h-autp w-full self-center  md:w-4/5  lg:w-2/6   px-10 py-6 z-20 ">
+                <h1 className="text-5xl text-white text-center pb-5 font-black ">Signup</h1>
                 <div className="mb-7">
                     <div className="mb-3">
                         <p className="font-semibold transform translate-y-5">Name</p>
@@ -138,43 +135,12 @@ export default function Signup() {
                     </div>                   
                    
                     <div className="flex justify-center">
-                        <button   test-id='signup-button' onClick={()=>{signup(signupName,signupEmail,signupPassword)}} className="bg-red-600 rounded-full w-5/6 h-10 text-white bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500">SIGNUP</button>
+                        <button   test-id='signup-button' onClick={()=>{signup(signupName,signupEmail,signupPassword)}} className=" text-red-600 rounded-full w-40 h-10  bg-white ">SIGNUP</button>
                     </div>                    
                 </div>
-                {/* <div className="text-center">
-                    <p>Or register using</p>
-                    <div className="flex flex-row justify-center mt-2">
-                            <div className="mx-2">
-                                <GoogleLogin
-                                    clientId={googleClientId}
-                                    render={renderProps => (
-                                    <button onClick={renderProps.onClick} disabled={renderProps.disabled} className="text-2xl bg-gray-100 rounded-full w-10 h-10 pl-2 "><FcGoogle /></button>
-                                    )}
-                                    buttonText=""
-                                    onSuccess={onLoginSuccess}
-                                    onFailure={onLoginFailure}
-                                    cookiePolicy={'single_host_origin'}
-                                />
-                            </div>
-                            <div className="mx-2">
-                                <FacebookLogin
-                                        appId={facebookAppId}
-                                        autoLoad={true}
-                                        fields="name,email"
-                                        onClick={onFacebookClicked}
-                                        callback={onFacebookCallback}
-                                        cssClass="rounded-full w-10 h-10 bg-blue-800 text-white"
-                                        textButton=""
-                                        icon="fa-facebook" />
-                            </div>
-                    </div>
-                    
-                         
-                         
-                </div> */}
                 <div className='w-full text-center'>
 
-                    <Link to="/login"><p className={`mt-4 font-bold text-pink-600 $`}>Already have an account?</p></Link>     
+                    <Link to="/login"><p className={`mt-4 font-bold text-white hover:text-black $`}>Already have an account?</p></Link>     
                 </div>
                 
             </div>

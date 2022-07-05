@@ -1,4 +1,9 @@
 // <reference types="cypress" />
+Cypress.on('uncaught:exception', (err, runnable) => {
+  // returning false here prevents Cypress from
+// failing the test
+  return false
+})
 describe('filters', () => {
     beforeEach(() => {
       cy.visit('http://localhost:3000/')

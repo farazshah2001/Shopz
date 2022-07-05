@@ -16,10 +16,12 @@ export default function Home() {
         <>
          <Navigation page="home" />
          <Categories />
-         <div className="lg:grid lg:grid-cols-12 mt-4">
-            <div className="lg:col-span-3 "><Filter /> </div>
-            <div className="lg:col-span-9 "><Items /></div>
-         </div>
+            <div className=" "><Filter /> </div>
+            <div className='px-4'>
+
+            <h1 className="text-2xl text-red-600 font-semibold md:border-b-4 border-red-600 mb-4 ">Select your Item</h1>
+            </div>
+            <div className=""><Items /></div>
          
            
         </>

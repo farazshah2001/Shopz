@@ -13,7 +13,7 @@ describe('signup', () => {
       cy.get('[test-id=login-link]').click().then(()=>{
         cy.get('[test-id=signup-link]').click().then(()=>{
             cy.get('[test-id=signup-name]').type('abc')
-            cy.get('[test-id=signup-email]').type('abdd@gmail.com')
+            cy.get('[test-id=signup-email]').type('abcdef@gmail.com')
             cy.get('[test-id=signup-password]').type('pass123')
             cy.get('[test-id=signup-button]').click().then(()=>{
                 cy.url().should('be.equal', 'http://localhost:3000/login')
